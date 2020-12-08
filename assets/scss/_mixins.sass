@@ -1,0 +1,34 @@
+@mixin fadeInWordY($length: 0)
+  span
+    position: relative
+    display: inline-block
+    &:before
+      content: ''
+      display: block
+      height: 100%
+      width: 100%
+      background-color: #000
+      position: absolute
+      top: 0
+      left: 0
+  @include fadeInWord-animationY($length)
+@mixin fadeInWord-animationY($length, $from: 1)
+  $delay: 0
+  @for $i from $from through $length
+    @if $i%2==0
+      span:nth-of-type(#{$i})
+          transform-origin: bottom
+          &:before
+              transform-origin: bottom
+    @else
+      span:nth-of-type(#{$i})
+        transform-origin: top
+        &:before
+          transform-origin: top
+    span:nth-of-type(#{$i})
+      &:before
+        animation: notScaleY 1.5s ease forwards
+    $delay: $delay + 0.1
+@keyframes notScaleY
+  100%
+    transform: scaleY(0)
