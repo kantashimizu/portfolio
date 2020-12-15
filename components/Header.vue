@@ -8,6 +8,10 @@ section.header
     :class="{ active: menuActive.works}"
     @click="menuClick('works')"
   ) Works
+  p(
+    :class="{ active: menuActive.contents}"
+    @click="menuClick('contents')"
+  ) Contents
 </template>
 
 <script>

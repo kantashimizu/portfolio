@@ -57,9 +57,9 @@ export default {
   display: flex
   justify-content: space-between
   .content
-    width: 300px
+    width: 30%
 .img_box
-  width: 300px
+  width: 100%
   overflow: hidden
   position: relative
   img
@@ -80,7 +80,7 @@ export default {
   p
     display: none
 .img_box:hover ~ .text_box
-  transition: 1s
+  transition: 0.5s
   width: calc(100% - 20px)
   line-height: 1.2
   padding: 0 10px
@@ -94,7 +94,7 @@ export default {
   transition: 0.3s
   opacity: 0.3
 .title
-  padding-top: 10px
+  padding-top: 30px
   text-align: center
   font-weight: bold
 .bold
